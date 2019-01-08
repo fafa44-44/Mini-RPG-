@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<html>
+<head>
+		<meta charset="UTF-8">
+		<title>RPG</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<div id="console"></div>
+		<script type="text/javascript" src="javascript/monstre.js"></script>
+		<script type="text/javascript" src="javascript/joueur.js"></script>
+		<script type="text/javascript" src="javascript/carte.js"></script>
+		<script type="text/javascript" src="javascript/coffre.js"></script>
+		<script type="text/javascript" src="javascript/armure.js"></script>
+		<script type="text/javascript" src="javascript/arme.js"></script>
+		<script type="text/javascript" src="javascript/combat.js"></script>
+		<script type="text/javascript" src="javascript/piege.js"></script>
+		<script type="text/javascript" src="javascript/sortie.js"></script>
+		<script type="text/javascript" src="javascript/fonction.js"></script>
+	</head>
+	<body>
+	<center>
+	<div id="formulaire">
+	<fieldset>
+	<legend>Personnage</legend>
+        <div>
+          <label for="nom">🤴 Nom:</label> 
+					<br><input type="text" id="nom" style="width: 150px">
+          <br><label for="hp">💖 Point de vie:</label> 
+					<br><input type="number" min="300" max="500" id="hp" style="width: 150px">
+          <br><label for="force">💪 Force:</label> 
+					<br><input type="number" min="10" max="20" id="force" style="width: 150px">
+          <br><label for="intelligence">🐒 Agilite :</label> 
+					<br><input type="number" min="10" max="20" id="intelligence" style="width: 150px">
+          <br><label for="agilite">🧠 Intelligence :</label> 
+					<br><input type="number" min="10" max="20" id="agilite" style="width: 150px">
+        </div>
+				<br>
+        <div class="button">
+          <button type="submit" onClick="initialisation()" id="boutonCreerPreso" style="width: 160px">Créer votre personnage</button>
+        </div>
+	</fieldset>
+	</div>
+	<div id="jeu">
+				<div id="caracteristiques"></div>
+				<div id="carte"></div>
+				<fieldset>
+				<legend>Déplacements</legend>
+				<div>
+          <button type="submit" onClick="monter()" style='width: 100px'>Nord</button>
+					<br></br>
+					<button type="submit" onClick="gauche()" style='width: 100px'>Ouest</button>
+          <button type="submit" onClick="droite()" style='width: 100px'>Est</button>
+					<br></br>
+					<button type="submit" onClick="descendre()" style='width: 100px'>Sud</button>
+        </div>
+				</fieldset>
+					<label>Inventaire :</label>
+					<div id="inventaire"></div>
+					<button type="submit" onClick="sauvJou()" style='width: 100px'>Sauvegarder</button>
+	</div>
+		<fieldset>
+			<legend>Boîte de dialogue</legend>
+			<div id="dialog"></div>
+			<div class="buttonClear">
+      	<button type="submit" onClick="nettoyer()">Clear</button>
+       </div>
+			</fieldset>
+	</center>
+	<script>
+		document.getElementById("jeu").style.display="none";
+	</script>
+</body>
+</html>
